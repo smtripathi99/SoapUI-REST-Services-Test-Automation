@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="Glemser" resourceRoot="" defaultScriptLanguage="Groovy" id="3fe5c6f6-0ff8-42cb-a1bb-3282e063fa20" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ProjectSettings@hermesConfig">${#System#user.home}\.hermes</con:setting></con:settings><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

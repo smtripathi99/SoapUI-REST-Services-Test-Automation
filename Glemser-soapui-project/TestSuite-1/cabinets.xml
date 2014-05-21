@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="cabinets" searchProperties="true" id="0cba58d6-fb0d-42fb-ad0e-a4a1a8bd242a" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:properties/><con:reportParameters/></con:testCase>
