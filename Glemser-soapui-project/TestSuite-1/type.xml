@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="type" searchProperties="true" id="f67d71b9-7c37-4704-b13d-a55bebc01c7f" xmlns:con="http://eviware.com/soapui/config"><con:description>Get the document types available in Response and assert</con:description><con:settings/><con:testStep type="restrequest" name="Type Request" id="d8b04de2-c483-40d3-9fd0-e23a1e119f2e"><con:settings/><con:config service="http://172.18.101.138:8080" resourcePath="/xmLabeling/type" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Type Request" mediaType="application/json" id="cba09ded-f1b3-4aeb-91da-6b31f29c9121"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="repository" value="${#TestSuite#repositoryID}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.138/xmLabeling/type</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion 200" id="9ca0ae1c-5e6e-4d86-a1a9-e999b429d1be"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>98bec3ab-cb77-41be-91dd-4710430547eb</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion- Annex II" id="a9662296-53d1-49f7-afe2-1906458eb6c8"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>dc8736e0-18c5-444b-a983-a33fb96a09b9</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[1]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>false</CanBeCreatedFromSourceDocument>
+  <DisplayName>Annex II</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>true</FilterByCountry>
+  <FilterByLanguage>true</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>true</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion Artwork" id="1ca56203-0af9-44d1-bc92-95bd022d1e2a"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>dce444ed-9729-459a-8ac0-010954c47806</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[2]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>false</CanBeCreatedFromSourceDocument>
+  <DisplayName>Artwork</DisplayName>
+  <DisplayOnCreate>false</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>false</FilterByCountry>
+  <FilterByLanguage>false</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>false</TranslationsEnabled>
+  <ValidFormats>
+    <e>pdf</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-document" id="ce3f464d-b865-4170-b798-3938c1292a4e"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>2b3a99e9-ad67-43d9-8712-c405b1e90842</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[3]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <DisplayName>GTC Document</DisplayName>
+  <DisplayOnCreate>false</DisplayOnCreate>
+  <DisplayOnImport>false</DisplayOnImport>
+  <FilterByCountry>false</FilterByCountry>
+  <FilterByLanguage>false</FilterByLanguage>
+  <ProfileDocuments>false</ProfileDocuments>
+  <Searchable>false</Searchable>
+  <TranslationsEnabled>false</TranslationsEnabled>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-Patient Info" id="30b0e72e-2eb7-4449-b77e-61db01ab2847"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>b81fd6f6-7754-471d-b385-d265f6749aa9</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[4]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>true</CanBeCreatedFromSourceDocument>
+  <DisplayName>Package Leaflet</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>true</FilterByCountry>
+  <FilterByLanguage>true</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>true</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion prescribing_info_us" id="11dc9000-bdf4-4f83-83fc-a5ee244c0050"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>f169f9fa-a13c-4e9b-a6ab-2991de5e7c3c</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[5]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>true</CanBeCreatedFromSourceDocument>
+  <DisplayName>US Package Insert</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>false</FilterByCountry>
+  <FilterByLanguage>false</FilterByLanguage>
+  <ProfileDocuments>false</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>false</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion- blister" id="259fc190-879a-4f3c-a117-dd311b509e1b"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>b248ffd4-3a27-4146-861a-2e994c1ba3e0</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[6]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>false</CanBeCreatedFromSourceDocument>
+  <DisplayName>Blister Labeling Text</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>true</FilterByCountry>
+  <FilterByLanguage>true</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>true</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-prescribing_info_eu" id="baf73dac-8499-470f-a38e-4578df9bd178"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>2f52594c-ed01-4bf0-8f6d-b7badc9fb69f</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[7]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>true</CanBeCreatedFromSourceDocument>
+  <DisplayName>Summary of Product Characteristics</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>true</FilterByCountry>
+  <FilterByLanguage>true</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>true</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-pdp" id="23a9b447-b207-4884-9c7e-66f6d10e5646"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>c836687e-fd88-433c-9759-78c071481f25</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[8]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <DisplayName>Principal Display Panel</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>false</FilterByCountry>
+  <FilterByLanguage>false</FilterByLanguage>
+  <ProfileDocuments>false</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>false</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_uspi_pdp>Where Referenced</gtc_xm_uspi_pdp>
+  </ValidRelations>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-core_data_sheet" id="d468fbff-b669-40b6-8217-468f108b7f1a"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>215084d5-09f8-4179-8ff3-e2589270465e</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[9]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>false</CanBeCreatedFromSourceDocument>
+  <DisplayName>Core Data Sheet</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>false</FilterByCountry>
+  <FilterByLanguage>false</FilterByLanguage>
+  <ProfileDocuments>false</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>false</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-text_immidiate" id="824c1c7f-0630-4318-b29f-c2a547784916"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>51afc4dc-02cf-462d-9eb4-ae168377e393</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[10]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>false</CanBeCreatedFromSourceDocument>
+  <DisplayName>Immediate Labeling Text</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>true</FilterByCountry>
+  <FilterByLanguage>true</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>true</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:properties><con:property><con:name>Searchable</con:name><con:value>true</con:value></con:property><con:property><con:name>TranslationsEnabled</con:name><con:value>true</con:value></con:property></con:properties><con:reportParameters/><con:breakPoints><con:testStepId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:testStepId><con:status>ENABLED</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>a9662296-53d1-49f7-afe2-1906458eb6c8</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>1ca56203-0af9-44d1-bc92-95bd022d1e2a</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>ce3f464d-b865-4170-b798-3938c1292a4e</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>30b0e72e-2eb7-4449-b77e-61db01ab2847</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>11dc9000-bdf4-4f83-83fc-a5ee244c0050</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>259fc190-879a-4f3c-a117-dd311b509e1b</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>baf73dac-8499-470f-a38e-4578df9bd178</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>23a9b447-b207-4884-9c7e-66f6d10e5646</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>d468fbff-b669-40b6-8217-468f108b7f1a</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>824c1c7f-0630-4318-b29f-c2a547784916</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>9ca0ae1c-5e6e-4d86-a1a9-e999b429d1be</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase>

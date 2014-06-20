@@ -1,3 +1,520 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="Glemser" resourceRoot="" defaultScriptLanguage="Groovy" id="3fe5c6f6-0ff8-42cb-a1bb-3282e063fa20" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ProjectSettings@hermesConfig">${#System#user.home}\.hermes</con:setting></con:settings><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://172.18.101.33:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://172.18.101.33:8080</con:endpoint></con:endpoints><con:resource name="Authenticate" path="/xmLabeling/authenticate" id="839bb1ab-960f-48db-9694-22fd489a63bc"><con:settings/><con:parameters/><con:method name="Authenticate" method="POST" id="ca15132b-79be-444f-aaef-84698080bdfb"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>502</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:aut="http://172.18.101.33/xmLabeling/authenticate">aut:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:aut="http://172.18.101.33/xmLabeling/authenticate">aut:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" mediaType="application/json" postQueryString="false" id="0f2ea9c9-94df-47fd-a967-733eb1d73f65"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Repository" value="xml70rp" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://172.18.101.33:8080</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/authenticate</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="Cabinets" path="/xmLabeling/cabinets" id="93e00a15-1a9c-43bd-aed6-b59d542491f1"><con:settings/><con:parameters/><con:method name="Method 1" method="GET" id="2c5c1c5c-e75e-47ad-a31a-dbbc7dcfcb5e"><con:settings/><con:parameters/><con:request name="Request 1" mediaType="application/json" id="e25f6bcd-612f-4e65-af77-57bee9aa439f"><con:settings/><con:endpoint>http://172.18.101.33:8080</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="Repository" path="/xmLabeling/repository" id="5e797b97-da61-4524-94c9-ce1e0b3e1d33"><con:settings/><con:parameters/><con:method name="Method 1" method="GET" id="2f3dbe00-3a71-4701-9512-2b681cb79dce"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>502</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" mediaType="application/json" id="4e649932-400f-4e14-a5ee-1b6434604b26"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://172.18.101.33:8080</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/repository</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite name="TestSuite 1" id="372ec147-5a3c-47fc-a67c-1605b874f822"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:properties/><con:reportParameters/><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="authentication" searchProperties="true" id="72d015cc-161a-49fb-91a8-4b6b0f751ebd"><con:settings/><con:testStep type="restrequest" name="Authenticate - Request 1" id="98ea4019-1593-4d3e-b300-55096ea60abf"><con:settings/><con:config service="http://172.18.101.33:8080" resourcePath="/xmLabeling/authenticate" methodName="Authenticate" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Authenticate - Request 1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Repository" value="xml70rp" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://172.18.101.33:8080</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/authenticate</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion TestStep" id="e5957efb-9296-4ca8-8968-a76f8443b0d9"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>8673dd97-07d3-4051-b660-746ab1e2896a</con:id><con:isGroup>false</con:isGroup><con:sourceId>98ea4019-1593-4d3e-b300-55096ea60abf</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns1='http://172.18.101.33/xmLabeling/authenticate';
-//ns1:Response[1]/ns1:ObjectType[1]/text()</path><content>dm_user</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Content Response" id="bc600843-12b1-44ed-af6b-da0e3d8f676a"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:testStep><con:testStep type="assertionteststep" name="HTTP 500" id="c1f9d82c-d0e6-4d81-a02c-101ecc636096"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>e504699d-9940-48d6-831d-c1b7f5456f6e</con:id><con:isGroup>false</con:isGroup><con:sourceId>98ea4019-1593-4d3e-b300-55096ea60abf</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes"><con:configuration><codes>500</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="HTTP 2000" id="e7ca8791-0e6a-45fb-9c76-94be59695236"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>6081e420-70f0-4a5b-b435-b0fb45fb722b</con:id><con:isGroup>false</con:isGroup><con:sourceId>98ea4019-1593-4d3e-b300-55096ea60abf</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes"><con:configuration><codes>2000</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="repository" searchProperties="true" id="3d4a6479-7f1b-4d59-aa26-ba664bf70ca1"><con:description>Test that the documentum repository return by the webservice is correct</con:description><con:settings/><con:testStep type="restrequest" name="GetRepository Request" id="6dea17c7-9650-4c6c-ade9-97c40a454d2b"><con:settings/><con:config service="http://172.18.101.33:8080" resourcePath="/xmLabeling/repository" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetRepository Request" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://172.18.101.33:8080</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/repository</con:originalUri><con:assertion type="XPath Match" name="Match content of [e]"><con:configuration><path>//Response[1]/e[1]/text()</path><content>xml70rp</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion Response" id="ffd8f0a8-51c7-4ffc-bd48-4504921391c2"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>0f99db67-1ac6-4be7-a579-a1fa1ddf1219</con:id><con:isGroup>false</con:isGroup><con:sourceId>6dea17c7-9650-4c6c-ade9-97c40a454d2b</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Simple Contains" name="Contains"><con:configuration><token>xml70rp</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion 200" id="38c67d0d-7115-4ecb-adb0-5fd7f9bf35e2"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>43e82359-a248-4b4f-9142-c25f245c2dc4</con:id><con:isGroup>false</con:isGroup><con:sourceId>6dea17c7-9650-4c6c-ade9-97c40a454d2b</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion Response SLA"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>3daf9c0f-a0f8-4098-ad4d-873452813389</con:id><con:isGroup>false</con:isGroup><con:sourceId>6dea17c7-9650-4c6c-ade9-97c40a454d2b</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Response SLA Assertion" name="Response SLA"><con:configuration><SLA>5000</SLA></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>6dea17c7-9650-4c6c-ade9-97c40a454d2b</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>ffd8f0a8-51c7-4ffc-bd48-4504921391c2</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="cabinets" searchProperties="true" id="0cba58d6-fb0d-42fb-ad0e-a4a1a8bd242a"><con:settings/><con:properties/><con:reportParameters/></con:testCase></con:testSuite></con:soapui-project>
+<con:soapui-project activeEnvironment="Default" name="Glemser" resourceRoot="" defaultScriptLanguage="Groovy" id="3fe5c6f6-0ff8-42cb-a1bb-3282e063fa20" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ProjectSettings@hermesConfig">${#System#user.home}\.hermes</con:setting></con:settings><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="OVERRIDE" domain="" password="password" username="appmanager01">${#Project#ServiceEndpoint}/</con:endpoint></con:endpointStrategy><con:requirements><con:requirement><con:id>GLM -3</con:id><con:name>Cabinets</con:name><con:description>Create a Rest Webservice for Cabinets Listing</con:description><con:status>In Scope</con:status><con:details>Pre-requisite:
+Authentication should be successful and user has access to the selected repository
+
+List of cabinets available in the selected repository should get and response with Doc ID as cabinet's name
+
+Resource: Cabinets
+
+URI: /cabinets
+
+Input: None
+
+Output: List of Cabinets (Cabinet ID)
+
+Sample JASON: cabinets/cabinet/object id, each field should come from xml file
+
+Validation:
+
+Exception: Cabinet not found
+
+Communications: Get</con:details><con:links/><con:testCases><con:entry>0cba58d6-fb0d-42fb-ad0e-a4a1a8bd242a</con:entry></con:testCases></con:requirement><con:requirement><con:id>GLM-46</con:id><con:name>data dictionary</con:name><con:description>Create a Rest Webservice for listing of Types (DataDictionary) SP 8</con:description><con:status>In Scope</con:status><con:details>Description:
+
+Pre-requisite:
+
+Resource: Types
+
+URI: /types
+
+Input: NA
+
+Output:
+
+List of document types with their display name, applicable for Create, Search.
+Type Name, Display Name, Display on Create, Display on Import, Searchable, Filter by Country, Filter by Language, Can be created from Source, Translation Enabled, Profiled Documents, Valid File Type
+Validation:
+
+Exception:
+
+Communications: Get</con:details><con:links/><con:testCases><con:entry>f67d71b9-7c37-4704-b13d-a55bebc01c7f</con:entry></con:testCases></con:requirement><con:requirement><con:id>GLM-131</con:id><con:name>Authentication</con:name><con:description>Create Test Cases for user authentication</con:description><con:status>In Scope</con:status><con:details>1. HTTP 200 for success
+2. Response Time SLA
+3. No RESPONSE
+4. Assertion for Content of Response
+5. HTTP 500,401
+6. HTTP 2000, 2001</con:details><con:links/><con:testCases><con:entry>72d015cc-161a-49fb-91a8-4b6b0f751ebd</con:entry></con:testCases></con:requirement><con:requirement><con:id>GLM-128</con:id><con:name>repository</con:name><con:description>Create a Rest WebService for Repository Listing</con:description><con:status>In Scope</con:status><con:details>Description:
+To get the repository list on login screen
+
+Pre-requisite:
+
+Resource: repository
+
+URI: /repository
+
+Input:
+
+Output: If no problem occurs, returns the list of repositories currently available
+Example JSON:
+["xml70rp"]
+
+Validation:
+
+Error: In case there occurs any problem while fetching repository list, returns the Status in Response Header as 500 Internal Error
+
+Communications: Get</con:details><con:links/><con:testCases><con:entry>3d4a6479-7f1b-4d59-aa26-ba664bf70ca1</con:entry></con:testCases></con:requirement><con:requirement><con:id>GLM-127</con:id><con:name>folders</con:name><con:description>Create Test Cases for folder listing</con:description><con:status>In Scope</con:status><con:details>1. Create a composite REST project.
+2. Create Test Suite/Cases
+3. Create REST Requests for Folder/Folders listing in a cabinet
+4. Input will be cabinet id
+5. Create Data Source for cabinet id
+6. Create Assertions for valid HTTP Code
+7. Create Assertions for Response SLA
+8. Create Assertion for JASON response</con:details><con:links/><con:testCases><con:entry>9b6ee928-ad3e-4f31-8a3d-d26c4b573bb2</con:entry></con:testCases></con:requirement><con:requirement><con:id>GLM-23</con:id><con:name>Related Documents</con:name><con:description>Create a Rest Webservice for Document's Related Docs SP 5</con:description><con:status>In Scope</con:status><con:links/><con:testCases><con:entry>82905b86-6cbb-4cb2-bdcb-14d87ea219e6</con:entry></con:testCases></con:requirement></con:requirements><con:properties><con:property><con:name>serviceEndPoint</con:name><con:value>http://172.18.101.138:8080</con:value></con:property></con:properties><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://172.18.101.138:8080" type="rest" id="d7a79f39-5396-4885-9f71-00afa03337f7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint></con:endpoints><con:resource name="Authenticate" path="/xmLabeling/authenticate" id="839bb1ab-960f-48db-9694-22fd489a63bc"><con:settings/><con:parameters/><con:method name="Authenticate" method="GET" id="ca15132b-79be-444f-aaef-84698080bdfb"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>502</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>401 500</con:status><con:params/><con:element xmlns:aut="http://172.18.101.33/xmLabeling/authenticate">aut:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:aut="http://172.18.101.33/xmLabeling/authenticate">aut:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=ISO-8859-1</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" mediaType="application/json" postQueryString="false" id="0f2ea9c9-94df-47fd-a967-733eb1d73f65"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Repository" value="xml70rp" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/authenticate</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="Cabinets" path="/xmLabeling/cabinet" id="93e00a15-1a9c-43bd-aed6-b59d542491f1"><con:settings/><con:parameters/><con:method name="Cabinet" method="GET" id="2c5c1c5c-e75e-47ad-a31a-dbbc7dcfcb5e"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>401 500</con:status><con:params/><con:element xmlns:cab="http://172.18.101.33/xmLabeling/cabinets">cab:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=ISO-8859-1</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" mediaType="application/json" id="e25f6bcd-612f-4e65-af77-57bee9aa439f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="folder" path="/xmLabeling/folder/{cabinetid}" id="3ba8ed8b-33b9-42d7-8237-4f38d927d539"><con:settings/><con:parameters><con:parameter required="true"><con:name>cabinetid</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Folder" method="GET" id="e45fc663-0229-44f2-a559-1427a692b582"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cab="http://172.18.101.138/xmLabeling/folder/cabinetid">cab:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" mediaType="application/json" id="10608923-d086-4f8c-b16e-6821b514a837"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Repository" value="xml70rp" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.138/xmLabeling/folder/cabinetid</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="cabinetid" value="0b0001ac80001d25" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>cabinetid</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="RelatedDoc" path="/xmLabeling/object/{objectid}" id="797f6d1b-26c3-4baf-93b5-27cfc98c6028"><con:settings/><con:parameters><con:parameter><con:name>objectid</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Related" method="GET" id="14934daa-a233-40df-8ad7-76dc25d7320f"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:obj="http://172.18.101.138/xmLabeling/object/">obj:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:obj="http://172.18.101.138/xmLabeling/object/">obj:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" mediaType="application/json" id="3f0b4638-d1c9-4a98-bc39-ebf3519c3901"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="repository" value="xml70rp" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://172.18.101.138:8080</con:endpoint><con:request/><con:originalUri>http://172.18.101.138/xmLabeling/object/</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="objectid" value="090001ac80003cb2" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>objectid</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="Repository" path="/xmLabeling/repository" id="5e797b97-da61-4524-94c9-ce1e0b3e1d33"><con:settings/><con:parameters/><con:method name="Repository" method="GET" id="2f3dbe00-3a71-4701-9512-2b681cb79dce"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>502</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=ISO-8859-1</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" mediaType="application/json" id="4e649932-400f-4e14-a5ee-1b6434604b26"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/repository</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="type" path="/xmLabeling/type" id="035bb00d-336a-4e90-92aa-ecaff77516fd"><con:settings/><con:parameters/><con:method name="Method 1" method="GET" id="c4f0f3fb-8f6d-44fb-9e50-2328c58d5936"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/><con:element>Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" mediaType="application/json" id="cba09ded-f1b3-4aeb-91da-6b31f29c9121"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="repository" value="xml70rp" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.138/xmLabeling/type</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite name="TestSuite 1" id="372ec147-5a3c-47fc-a67c-1605b874f822"><con:description>Test Suite for REST web services</con:description><con:settings><con:setting id="IncludeOverview">true</con:setting><con:setting id="IncludeResults">true</con:setting><con:setting id="FlowLayout">false</con:setting><con:setting id="ErrorDetails">true</con:setting><con:setting id="IncludeCoverage">true</con:setting><con:setting id="GeneratableJUnitReport@Style">Multiple Pages</con:setting><con:setting id="GeneratableJUnitReport@Folder">C:\amitu\re</con:setting></con:settings><con:runType>SEQUENTIAL</con:runType><con:properties><con:property><con:name>cabinet id</con:name><con:value>0c0001ac80000eea</con:value></con:property><con:property><con:name>repositoryID</con:name><con:value>xml70rp</con:value></con:property></con:properties><con:reportParameters/><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="repository" searchProperties="true" id="3d4a6479-7f1b-4d59-aa26-ba664bf70ca1"><con:description>Test that the documentum repository return by the webservice is correct</con:description><con:settings/><con:testStep type="restrequest" name="GetRepository Request" id="6dea17c7-9650-4c6c-ade9-97c40a454d2b"><con:settings/><con:config service="http://172.18.101.138:8080" resourcePath="/xmLabeling/repository" methodName="Repository" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetRepository Request" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/repository</con:originalUri><con:assertion type="XPath Match" name="Match content of [e]" id="5f3266cc-91a0-4738-876c-102855d09fc5"><con:configuration><path>//Response[1]/e[1]/text()</path><content>xml70rp</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion Response" id="ffd8f0a8-51c7-4ffc-bd48-4504921391c2"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>0f99db67-1ac6-4be7-a579-a1fa1ddf1219</con:id><con:isGroup>false</con:isGroup><con:sourceId>6dea17c7-9650-4c6c-ade9-97c40a454d2b</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Simple Contains" name="Contains"><con:configuration><token>xml70rp</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion 200" id="38c67d0d-7115-4ecb-adb0-5fd7f9bf35e2"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>43e82359-a248-4b4f-9142-c25f245c2dc4</con:id><con:isGroup>false</con:isGroup><con:sourceId>6dea17c7-9650-4c6c-ade9-97c40a454d2b</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion Response SLA" id="4fafabf8-e0d0-4f1b-bc8c-943d38130866"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>3daf9c0f-a0f8-4098-ad4d-873452813389</con:id><con:isGroup>false</con:isGroup><con:sourceId>6dea17c7-9650-4c6c-ade9-97c40a454d2b</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Response SLA Assertion" name="Response SLA"><con:configuration><SLA>5000</SLA></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="properties" name="Properties repository" id="bbc5a3d0-8f50-407f-a932-036b2e6419c9"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>e</con:name><con:value>xml70rp</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="PropertyTransfer" id="11554015-f8b8-412a-a55a-36a503daa7e7"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false" entitize="false" ignoreEmpty="false" useXQuery="false" transferChildNodes="false"><con:name>e</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>GetRepository Request</con:sourceStep><con:sourcePath>//Response[1]/e[1]</con:sourcePath><con:targetType>repositoryID</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:targetPath/></con:transfers></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>6dea17c7-9650-4c6c-ade9-97c40a454d2b</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>ffd8f0a8-51c7-4ffc-bd48-4504921391c2</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>38c67d0d-7115-4ecb-adb0-5fd7f9bf35e2</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>4fafabf8-e0d0-4f1b-bc8c-943d38130866</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>bbc5a3d0-8f50-407f-a932-036b2e6419c9</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>11554015-f8b8-412a-a55a-36a503daa7e7</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="authentication" searchProperties="true" id="72d015cc-161a-49fb-91a8-4b6b0f751ebd"><con:settings/><con:testStep type="restrequest" name="Authenticate Request" id="98ea4019-1593-4d3e-b300-55096ea60abf"><con:settings/><con:config service="http://172.18.101.138:8080" resourcePath="/xmLabeling/authenticate" methodName="Authenticate" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Authenticate Request" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Repository" value="${#TestSuite#repositoryID}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/authenticate</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion TestStep" id="e5957efb-9296-4ca8-8968-a76f8443b0d9"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:testStep><con:testStep type="assertionteststep" name="Content Response" id="bc600843-12b1-44ed-af6b-da0e3d8f676a"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>0c56179a-4f64-4a33-9a46-31f0fec843a6</con:id><con:isGroup>false</con:isGroup><con:sourceId>98ea4019-1593-4d3e-b300-55096ea60abf</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Simple Contains" name="Contains"><con:configuration><token>dm_user</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="restrequest" name="REST Test Request- 2001" id="ba3d7845-fa93-4703-93de-b40c6836220c"><con:settings/><con:config service="http://172.18.101.138:8080" methodName="Authenticate" resourcePath="/xmLabeling/authenticate" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Test Request- 2001" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/authenticate</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="HTTP-2001" id="12642e4a-215b-487b-bf31-c9d68877d9b7"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>0c4f13d2-d997-42ae-9019-badc889d8dc0</con:id><con:isGroup>false</con:isGroup><con:sourceId>ba3d7845-fa93-4703-93de-b40c6836220c</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes"><con:configuration><codes>2001
+</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="restrequest" name="REST Test Request-2000" id="1fd398ba-1bb0-466c-b685-09a4b8b24774"><con:settings/><con:config service="http://172.18.101.138:8080" methodName="Authenticate" resourcePath="/xmLabeling/authenticate" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Test Request-2000" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/authenticate</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="HTTP- 2000" id="ab3277e7-ae34-4487-a1bd-3853e5010df9"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>597d0383-99a1-4c0a-bf3f-c1bdbec99a4e</con:id><con:isGroup>false</con:isGroup><con:sourceId>1fd398ba-1bb0-466c-b685-09a4b8b24774</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes"><con:configuration><codes>2000</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="restrequest" name="REST Test Request- 401" id="31ba6e45-b298-4a86-be0c-e89cc3b38e38"><con:settings/><con:config service="http://172.18.101.138:8080" methodName="Authenticate" resourcePath="/xmLabeling/authenticate" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Test Request- 401" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="repository" value="xml70rp" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/authenticate</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="HTTP 401" id="986056c5-46b1-4bc8-8c7d-693be827b77c" disabled="true"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>15301128-e383-4cf8-a6e7-31ee31b4ae1b</con:id><con:isGroup>false</con:isGroup><con:sourceId>31ba6e45-b298-4a86-be0c-e89cc3b38e38</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes"><con:configuration><codes>401</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="restrequest" name="REST Test Request- 500" id="61e454ce-1329-4b83-a4dd-e94da02cdfc4"><con:settings/><con:config service="http://172.18.101.138:8080" methodName="Authenticate" resourcePath="/xmLabeling/authenticate" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Test Request- 500" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/authenticate</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:setupScript>
+
+</con:setupScript><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>11554015-f8b8-412a-a55a-36a503daa7e7</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="cabinets" searchProperties="true" id="0cba58d6-fb0d-42fb-ad0e-a4a1a8bd242a"><con:settings/><con:testStep type="restrequest" name="GetCabinets Request" id="a9bcefdf-2276-4321-bbbf-ffc17cd7ef25"><con:settings/><con:config service="http://172.18.101.138:8080" methodName="Cabinet" resourcePath="/xmLabeling/cabinet" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetCabinets Request" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Repository" value="${#TestSuite#repositoryID}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.33/xmLabeling/cabinets</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion Text" id="e363df31-d467-40a2-89a8-137f70e3a3fc"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>9c246660-3f3b-47fb-9670-e625794f1dc1</con:id><con:isGroup>false</con:isGroup><con:sourceId>a9bcefdf-2276-4321-bbbf-ffc17cd7ef25</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Simple Contains" name="Contains"><con:configuration><token>Product Labeling</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion 500" id="80288c78-63d7-4311-86d3-086a54ae5169"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>26be6172-25b8-4c6a-8c33-db08249e2392</con:id><con:isGroup>false</con:isGroup><con:sourceId>a9bcefdf-2276-4321-bbbf-ffc17cd7ef25</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes"><con:configuration><codes>500</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion 200" id="f743e026-d8f4-405d-bc4b-fdf3d981aed8"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>8995616c-47df-4db5-b055-ee763624ef14</con:id><con:isGroup>false</con:isGroup><con:sourceId>a9bcefdf-2276-4321-bbbf-ffc17cd7ef25</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion Count" id="0c34459f-2e8c-47eb-9dd0-0688a2c7fa96"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>e3372f9b-39a8-4093-8ffa-772e8ff81e42</con:id><con:isGroup>false</con:isGroup><con:sourceId>a9bcefdf-2276-4321-bbbf-ffc17cd7ef25</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>count( //Response/e/Attributes)</path><content>11</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="transfer" name="PropertyTransfer" id="344963f3-f4e0-4734-8de1-d10950cb91b7"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>ObjectId</con:name><con:sourceType>ResponseAsXml</con:sourceType><con:sourceStep>GetCabinets Request</con:sourceStep><con:sourcePath>//Response[1]/e[1]/ObjectId[1]</con:sourcePath><con:targetType>cabinet id</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:targetPath/></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties cabinet" id="9f61b1dd-dff3-4305-99c0-6ceb04a7dd2e"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>ObjectId</con:name><con:value>0c0001ac80000eea</con:value></con:property></con:properties></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>344963f3-f4e0-4734-8de1-d10950cb91b7</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>9f61b1dd-dff3-4305-99c0-6ceb04a7dd2e</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="folders" searchProperties="true" id="9b6ee928-ad3e-4f31-8a3d-d26c4b573bb2"><con:settings/><con:testStep type="restrequest" name="Folder Request" id="95b6d429-32c4-47db-9c45-409bda522a01"><con:settings/><con:config service="http://172.18.101.138:8080" resourcePath="/xmLabeling/folder/{cabinetid}" methodName="Folder" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Folder Request" mediaType="application/json" id="10608923-d086-4f8c-b16e-6821b514a837"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Repository" value="${#TestSuite#repositoryID}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.138/xmLabeling/folder/cabinetid</con:originalUri><con:assertion type="XPath Match" name="Check count of [RecordCount]" id="75b4d365-74ab-4ae3-a97f-8bac52bd37eb"><con:configuration><path>declare namespace ns1='http://172.18.101.138/xmLabeling/folder/cabinetid';
+count( //ns1:Response/ns1:RecordCount)</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="cabinetid" value="${#TestSuite#cabinet id}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>cabinetid</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion 200" id="2299f286-24d6-44a0-bbdd-abc22a99c8ef"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:testStep><con:testStep type="assertionteststep" name="Assertion Response" id="ffcbd0e9-cc96-4328-bfbd-c1b031b8f7ae"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>157ec548-c756-4cc0-885c-998e11221eec</con:id><con:isGroup>false</con:isGroup><con:sourceId>95b6d429-32c4-47db-9c45-409bda522a01</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns1='http://172.18.101.138/xmLabeling/folder/cabinetid';
+count( //ns1:Response/ns1:RecordCount)</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>95b6d429-32c4-47db-9c45-409bda522a01</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="type" searchProperties="true" id="f67d71b9-7c37-4704-b13d-a55bebc01c7f"><con:description>Get the document types available in Response and assert</con:description><con:settings/><con:testStep type="restrequest" name="Type Request" id="d8b04de2-c483-40d3-9fd0-e23a1e119f2e"><con:settings/><con:config service="http://172.18.101.138:8080" resourcePath="/xmLabeling/type" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Type Request" mediaType="application/json" id="cba09ded-f1b3-4aeb-91da-6b31f29c9121"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="repository" value="${#TestSuite#repositoryID}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>${#Project#ServiceEndpoint}/</con:endpoint><con:request/><con:originalUri>http://172.18.101.138/xmLabeling/type</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion 200" id="9ca0ae1c-5e6e-4d86-a1a9-e999b429d1be"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>98bec3ab-cb77-41be-91dd-4710430547eb</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion- Annex II" id="a9662296-53d1-49f7-afe2-1906458eb6c8"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>dc8736e0-18c5-444b-a983-a33fb96a09b9</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[1]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>false</CanBeCreatedFromSourceDocument>
+  <DisplayName>Annex II</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>true</FilterByCountry>
+  <FilterByLanguage>true</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>true</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion Artwork" id="1ca56203-0af9-44d1-bc92-95bd022d1e2a"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>dce444ed-9729-459a-8ac0-010954c47806</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[2]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>false</CanBeCreatedFromSourceDocument>
+  <DisplayName>Artwork</DisplayName>
+  <DisplayOnCreate>false</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>false</FilterByCountry>
+  <FilterByLanguage>false</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>false</TranslationsEnabled>
+  <ValidFormats>
+    <e>pdf</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-document" id="ce3f464d-b865-4170-b798-3938c1292a4e"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>2b3a99e9-ad67-43d9-8712-c405b1e90842</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[3]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <DisplayName>GTC Document</DisplayName>
+  <DisplayOnCreate>false</DisplayOnCreate>
+  <DisplayOnImport>false</DisplayOnImport>
+  <FilterByCountry>false</FilterByCountry>
+  <FilterByLanguage>false</FilterByLanguage>
+  <ProfileDocuments>false</ProfileDocuments>
+  <Searchable>false</Searchable>
+  <TranslationsEnabled>false</TranslationsEnabled>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-Patient Info" id="30b0e72e-2eb7-4449-b77e-61db01ab2847"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>b81fd6f6-7754-471d-b385-d265f6749aa9</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[4]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>true</CanBeCreatedFromSourceDocument>
+  <DisplayName>Package Leaflet</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>true</FilterByCountry>
+  <FilterByLanguage>true</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>true</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion prescribing_info_us" id="11dc9000-bdf4-4f83-83fc-a5ee244c0050"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>f169f9fa-a13c-4e9b-a6ab-2991de5e7c3c</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[5]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>true</CanBeCreatedFromSourceDocument>
+  <DisplayName>US Package Insert</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>false</FilterByCountry>
+  <FilterByLanguage>false</FilterByLanguage>
+  <ProfileDocuments>false</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>false</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion- blister" id="259fc190-879a-4f3c-a117-dd311b509e1b"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>b248ffd4-3a27-4146-861a-2e994c1ba3e0</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[6]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>false</CanBeCreatedFromSourceDocument>
+  <DisplayName>Blister Labeling Text</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>true</FilterByCountry>
+  <FilterByLanguage>true</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>true</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-prescribing_info_eu" id="baf73dac-8499-470f-a38e-4578df9bd178"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>2f52594c-ed01-4bf0-8f6d-b7badc9fb69f</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[7]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>true</CanBeCreatedFromSourceDocument>
+  <DisplayName>Summary of Product Characteristics</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>true</FilterByCountry>
+  <FilterByLanguage>true</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>true</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-pdp" id="23a9b447-b207-4884-9c7e-66f6d10e5646"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>c836687e-fd88-433c-9759-78c071481f25</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[8]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <DisplayName>Principal Display Panel</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>false</FilterByCountry>
+  <FilterByLanguage>false</FilterByLanguage>
+  <ProfileDocuments>false</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>false</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_uspi_pdp>Where Referenced</gtc_xm_uspi_pdp>
+  </ValidRelations>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-core_data_sheet" id="d468fbff-b669-40b6-8217-468f108b7f1a"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>215084d5-09f8-4179-8ff3-e2589270465e</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[9]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>false</CanBeCreatedFromSourceDocument>
+  <DisplayName>Core Data Sheet</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>false</FilterByCountry>
+  <FilterByLanguage>false</FilterByLanguage>
+  <ProfileDocuments>false</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>false</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion-text_immidiate" id="824c1c7f-0630-4318-b29f-c2a547784916"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>51afc4dc-02cf-462d-9eb4-ae168377e393</con:id><con:isGroup>false</con:isGroup><con:sourceId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>//Response[1]/e[10]/Configuration[1]</path><content><![CDATA[<Configuration>
+  <CanBeCreatedFromSourceDocument>false</CanBeCreatedFromSourceDocument>
+  <DisplayName>Immediate Labeling Text</DisplayName>
+  <DisplayOnCreate>true</DisplayOnCreate>
+  <DisplayOnImport>true</DisplayOnImport>
+  <FilterByCountry>true</FilterByCountry>
+  <FilterByLanguage>true</FilterByLanguage>
+  <ProfileDocuments>true</ProfileDocuments>
+  <Searchable>true</Searchable>
+  <TranslationsEnabled>true</TranslationsEnabled>
+  <ValidFormats>
+    <e>xml</e>
+    <e>pdf</e>
+    <e>msw8</e>
+    <e>msw12</e>
+  </ValidFormats>
+  <ValidRelations>
+    <gtc_xm_source_document>Source Docs</gtc_xm_source_document>
+    <gtc_xm_sum_of_change>Sum of Change</gtc_xm_sum_of_change>
+    <gtc_xm_supporting_doc>Supporting Docs</gtc_xm_supporting_doc>
+  </ValidRelations>
+  <ValidSourceDocuments>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSourceDocuments>
+  <ValidSupportingDocuments>
+    <e>gtc_xm_annex_ll</e>
+    <e>gtc_xm_artwork</e>
+    <e>gtc_xm_packaging_text</e>
+    <e>gtc_xm_patient_info</e>
+    <e>gtc_xm_patient_info_eu</e>
+    <e>gtc_xm_prescribing_info</e>
+    <e>gtc_xm_prescribing_info_eu</e>
+    <e>gtc_xm_prescribing_info_us</e>
+    <e>gtc_xm_supporting_doc</e>
+    <e>gtc_xm_core_data_sheet</e>
+    <e>gtc_xm_consol_label_eu</e>
+    <e>gtc_xm_pkg_text_blister</e>
+    <e>gtc_xm_pkg_text_immediate</e>
+    <e>gtc_xm_pkg_text_outer</e>
+    <e>gtc_xm_device_submission</e>
+  </ValidSupportingDocuments>
+</Configuration>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:properties><con:property><con:name>Searchable</con:name><con:value>true</con:value></con:property><con:property><con:name>TranslationsEnabled</con:name><con:value>true</con:value></con:property></con:properties><con:reportParameters/><con:breakPoints><con:testStepId>d8b04de2-c483-40d3-9fd0-e23a1e119f2e</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>a9662296-53d1-49f7-afe2-1906458eb6c8</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>1ca56203-0af9-44d1-bc92-95bd022d1e2a</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>ce3f464d-b865-4170-b798-3938c1292a4e</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>30b0e72e-2eb7-4449-b77e-61db01ab2847</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>11dc9000-bdf4-4f83-83fc-a5ee244c0050</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>259fc190-879a-4f3c-a117-dd311b509e1b</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>baf73dac-8499-470f-a38e-4578df9bd178</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>23a9b447-b207-4884-9c7e-66f6d10e5646</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>d468fbff-b669-40b6-8217-468f108b7f1a</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>824c1c7f-0630-4318-b29f-c2a547784916</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="relateddoc" searchProperties="true" id="82905b86-6cbb-4cb2-bdcb-14d87ea219e6"><con:description>Create a Rest Webservice for Document's Related Docs</con:description><con:settings/><con:testStep type="restrequest" name="getRelatedDoc Request" id="8e10943c-72cb-493a-aba9-36396184000b"><con:settings/><con:config service="http://172.18.101.138:8080" resourcePath="/xmLabeling/object/{objectid}" methodName="Related" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getRelatedDoc Request" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="repository" value="xml70rp" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://172.18.101.138:8080</con:endpoint><con:request/><con:originalUri>http://172.18.101.138/xmLabeling/object/</con:originalUri><con:credentials><con:username>appmanager01</con:username><con:password>password</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="objectid" value="${#TestCase#objectid}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>objectid</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion 200" id="2dd8adeb-b695-42dc-9b23-7d3dc53e4630"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>b00504cb-1675-4d3c-8cef-7fc37734912d</con:id><con:isGroup>false</con:isGroup><con:sourceId>8e10943c-72cb-493a-aba9-36396184000b</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:testStep type="assertionteststep" name="Assertion DocID"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>453048fe-bb2c-4936-814f-a386eb081352</con:id><con:isGroup>false</con:isGroup><con:sourceId>8e10943c-72cb-493a-aba9-36396184000b</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns1='http://172.18.101.138/xmLabeling/object/';
+exists( //ns1:Response/ns1:ObjectId)</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:properties><con:property><con:name>objectid</con:name><con:value>090001ac80003cb2</con:value></con:property></con:properties><con:reportParameters/></con:testCase></con:testSuite></con:soapui-project>

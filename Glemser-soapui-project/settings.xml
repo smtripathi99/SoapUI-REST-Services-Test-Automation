@@ -1,2 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="Glemser" resourceRoot="" defaultScriptLanguage="Groovy" id="3fe5c6f6-0ff8-42cb-a1bb-3282e063fa20" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ProjectSettings@hermesConfig">${#System#user.home}\.hermes</con:setting></con:settings><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+<con:soapui-project activeEnvironment="Default" name="Glemser" resourceRoot="" defaultScriptLanguage="Groovy" id="3fe5c6f6-0ff8-42cb-a1bb-3282e063fa20" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ProjectSettings@hermesConfig">${#System#user.home}\.hermes</con:setting></con:settings><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="OVERRIDE" domain="" password="password" username="appmanager01">${#Project#ServiceEndpoint}/</con:endpoint><con:endpoint mode="OVERRIDE" username="" password="">http://LP_Sneh:8081/</con:endpoint></con:endpointStrategy><con:requirements><con:requirement><con:id>GLM -3</con:id><con:name>Cabinets</con:name><con:description>Create a Rest Webservice for Cabinets Listing</con:description><con:status>In Scope</con:status><con:details>Pre-requisite:
+Authentication should be successful and user has access to the selected repository
+
+List of cabinets available in the selected repository should get and response with Doc ID as cabinet's name
+
+Resource: Cabinets
+
+URI: /cabinets
+
+Input: None
+
+Output: List of Cabinets (Cabinet ID)
+
+Sample JASON: cabinets/cabinet/object id, each field should come from xml file
+
+Validation:
+
+Exception: Cabinet not found
+
+Communications: Get</con:details><con:links/><con:testCases><con:entry>0cba58d6-fb0d-42fb-ad0e-a4a1a8bd242a</con:entry></con:testCases></con:requirement><con:requirement><con:id>GLM-46</con:id><con:name>data dictionary</con:name><con:description>Create a Rest Webservice for listing of Types (DataDictionary) SP 8</con:description><con:status>In Scope</con:status><con:details>Description:
+
+Pre-requisite:
+
+Resource: Types
+
+URI: /types
+
+Input: NA
+
+Output:
+
+List of document types with their display name, applicable for Create, Search.
+Type Name, Display Name, Display on Create, Display on Import, Searchable, Filter by Country, Filter by Language, Can be created from Source, Translation Enabled, Profiled Documents, Valid File Type
+Validation:
+
+Exception:
+
+Communications: Get</con:details><con:links/><con:testCases><con:entry>f67d71b9-7c37-4704-b13d-a55bebc01c7f</con:entry></con:testCases></con:requirement><con:requirement><con:id>GLM-131</con:id><con:name>Authentication</con:name><con:description>Create Test Cases for user authentication</con:description><con:status>In Scope</con:status><con:details>1. HTTP 200 for success
+2. Response Time SLA
+3. No RESPONSE
+4. Assertion for Content of Response
+5. HTTP 500,401
+6. HTTP 2000, 2001</con:details><con:links/><con:testCases><con:entry>72d015cc-161a-49fb-91a8-4b6b0f751ebd</con:entry></con:testCases></con:requirement><con:requirement><con:id>GLM-128</con:id><con:name>repository</con:name><con:description>Create a Rest WebService for Repository Listing</con:description><con:status>In Scope</con:status><con:details>Description:
+To get the repository list on login screen
+
+Pre-requisite:
+
+Resource: repository
+
+URI: /repository
+
+Input:
+
+Output: If no problem occurs, returns the list of repositories currently available
+Example JSON:
+["xml70rp"]
+
+Validation:
+
+Error: In case there occurs any problem while fetching repository list, returns the Status in Response Header as 500 Internal Error
+
+Communications: Get</con:details><con:links/><con:testCases><con:entry>3d4a6479-7f1b-4d59-aa26-ba664bf70ca1</con:entry></con:testCases></con:requirement><con:requirement><con:id>GLM-127</con:id><con:name>folders</con:name><con:description>Create Test Cases for folder listing</con:description><con:status>In Scope</con:status><con:details>1. Create a composite REST project.
+2. Create Test Suite/Cases
+3. Create REST Requests for Folder/Folders listing in a cabinet
+4. Input will be cabinet id
+5. Create Data Source for cabinet id
+6. Create Assertions for valid HTTP Code
+7. Create Assertions for Response SLA
+8. Create Assertion for JASON response</con:details><con:links/><con:testCases><con:entry>9b6ee928-ad3e-4f31-8a3d-d26c4b573bb2</con:entry></con:testCases></con:requirement><con:requirement><con:id>GLM-23</con:id><con:name>Related Documents</con:name><con:description>Create a Rest Webservice for Document's Related Docs SP 5</con:description><con:status>In Scope</con:status><con:links/><con:testCases><con:entry>82905b86-6cbb-4cb2-bdcb-14d87ea219e6</con:entry></con:testCases></con:requirement></con:requirements><con:properties><con:property><con:name>serviceEndPoint</con:name><con:value>http://LP_Sneh:8081</con:value></con:property></con:properties><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/><con:restMockService port="8081" path="/" host="LP_Sneh" name="REST MockService 1" docroot="C:/Mock"><con:settings/><con:properties/></con:restMockService><con:restMockService port="8081" path="/" host="LP_Sneh" name="REST MockService 1" docroot="C:/Mock"><con:settings/><con:properties/></con:restMockService></con:soapui-project>

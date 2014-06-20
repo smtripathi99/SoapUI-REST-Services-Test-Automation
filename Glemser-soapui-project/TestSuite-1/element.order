@@ -1,3 +1,6 @@
-authentication.xml
 repository.xml
+authentication.xml
 cabinets.xml
+folders.xml
+type.xml
+relateddoc.xml
